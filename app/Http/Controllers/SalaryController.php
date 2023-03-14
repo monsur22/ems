@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Position;
+use App\Models\Salary;
 use Illuminate\Http\Request;
 
-class PositionController extends Controller
+class SalaryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PositionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Salary  $salary
      * @return \Illuminate\Http\Response
      */
-    public function show(Position $position)
+    public function show(Salary $salary)
     {
         //
     }
@@ -52,10 +52,10 @@ class PositionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Salary  $salary
      * @return \Illuminate\Http\Response
      */
-    public function edit(Position $position)
+    public function edit(Salary $salary)
     {
         //
     }
@@ -64,10 +64,10 @@ class PositionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Salary  $salary
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Position $position)
+    public function update(Request $request, Salary $salary)
     {
         //
     }
@@ -75,10 +75,10 @@ class PositionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Salary  $salary
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Position $position)
+    public function destroy(Salary $salary)
     {
         //
     }

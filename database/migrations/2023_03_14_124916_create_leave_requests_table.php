@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('positions', function (Blueprint $table) {
+        Schema::create('leave_requests', function (Blueprint $table) {
             $table->id();
-            $table->string('job_title');
-            $table->string('job_description')->nullable();
+            $table->foreignId('employee_id')->constrained();
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->string('reason');
+            $table->integer('status');
+            $table->foreignId('approved_by')->nullable()->constrained('users');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('positions');
+        Schema::dropIfExists('leave_requests');
     }
 };
