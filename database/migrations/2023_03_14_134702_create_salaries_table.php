@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('salaries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('employee_id')->constrained();
+            $table->unsignedBigInteger('employee_id')->nullable();
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('set null');
             $table->decimal('amount', 10, 2);
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();

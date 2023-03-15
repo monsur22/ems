@@ -15,11 +15,13 @@ return new class extends Migration
     {
         Schema::create('entry_exits', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('employee_id')->constrained();
+            $table->unsignedBigInteger('employee_id')->nullable();
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('set null');
             $table->timestamp('login_time');
-            $table->timestamp('logout_time');
-            $table->integer('status');
-            $table->foreignId('approved_by')->nullable()->constrained('users');
+            $table->timestamp('logout_time')->nullable();
+            $table->integer('status')->default(0);
+            $table->unsignedBigInteger('approved_by')->nullable();
+            $table->foreign('approved_by')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();
         });
     }

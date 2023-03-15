@@ -23,7 +23,7 @@ class AuthController extends Controller
     | This createUser function create a user and send  a verification email.
     | First check that email already exits or not.
     | If the user exists but their email is not verified,
-    | update the confirmation codeand send a new confirmation email
+    | update the confirmation code and send a new confirmation email
     | Otherwise, create a new user with the given details and send a confirmation email
     ----------------------------------------------------------------------------------
     */

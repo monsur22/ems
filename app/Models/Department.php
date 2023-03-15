@@ -13,4 +13,8 @@ class Department extends Model
         'name',
         'location',
     ];
+    public function employee()
+    {
+        return $this->hasMany(Employee::class);
+    }
 }
