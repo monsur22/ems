@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,4 +33,8 @@ Route::group(['middleware' => 'api','prefix'=>'auth'], function ($router) {
 
 Route::group(['middleware' => ['auth:sanctum']], function() {
     Route::get('/user', [AuthController::class, 'user']);
+    // Route::get('/employee', [EmployeeController::class]);
+    // Route::resource('employee', EmployeeController::class);
+
 });
+Route::resource('employee', EmployeeController::class);

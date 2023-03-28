@@ -7,6 +7,8 @@ use App\Services\AuthServiceInterface;
 use App\Services\Impl\AuthServiceImpl;
 use App\Repositories\AuthRepositoryInterface;
 use App\Repositories\Impl\AuthRepositoryImpl;
+use App\Services\EmployeeServiceInterface;
+use App\Services\Impl\EmployeeServiceImpl;
 
 class ApiAuthServiceProvider extends ServiceProvider
 {

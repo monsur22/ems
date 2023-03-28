@@ -31,6 +31,7 @@ class AuthController extends Controller
     {
         $user = $this->authService->createUser($request);
         return $user;
+        // return $user->fresh();
     }
     /*
     -----------------------------------------------------------------

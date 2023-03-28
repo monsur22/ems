@@ -198,7 +198,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\ApiAuthServiceProvider::class,
-
+        App\Providers\ApiServiceProvider::class,
 
     ],
 
