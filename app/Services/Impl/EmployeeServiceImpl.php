@@ -22,10 +22,8 @@ class EmployeeServiceImpl implements EmployeeServiceInterface
         // Create a new user
         $user = $this->authService->createUser($request);
         $user = json_decode($user->getContent())->user;
-
         // Create a new employee
         $employee = $this->employeeRepository->createEmployee($user->id);
-
         return $employee;
     }
 

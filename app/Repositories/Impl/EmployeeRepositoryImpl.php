@@ -16,7 +16,6 @@ class EmployeeRepositoryImpl implements EmployeeRepositoryInterface
             'status' => 0,
             'user_id' => $userId
         ]);
-
         return $employee;
     }
 

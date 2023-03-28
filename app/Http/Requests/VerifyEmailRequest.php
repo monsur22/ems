@@ -8,7 +8,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
 
-class RegistrationRequest extends FormRequest
+class VerifyEmailRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,9 +28,8 @@ class RegistrationRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => ['required', 'string', 'email', 'max:100', Rule::unique('users')->where(function ($q) {
-                $q->whereNotNull('email_verified_at');
-            }) ]
+            // 'name' => 'required|string|between:2,100',
+            'password' => 'required|string|confirmed|min:5',
         ];
     }
 
@@ -46,8 +45,10 @@ class RegistrationRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.required' => 'This field is required.',
-            'email.unique' => 'This email already exists.',
+            // 'name.required' => 'This field is required.',
+            // 'name.string' => 'This accept string',
+            'password.required' => 'This field is required.',
+            'password.confirmed' => 'Password and confirm password must be same',
         ];
     }
 }

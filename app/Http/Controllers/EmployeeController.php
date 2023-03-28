@@ -51,9 +51,7 @@ class EmployeeController extends Controller
 
         try {
             $employee = $this->employeeService->createEmployee($request);
-
             DB::commit();
-
             return response()->json([
                 'data' => [
                     'message' => 'Employee created successfully.'
