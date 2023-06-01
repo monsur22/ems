@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('employee_id')->nullable();
             $table->foreign('employee_id')->references('id')->on('employees')->onDelete('set null');
-            $table->timestamp('login_time');
+            $table->timestamp('login_time')->nullable();
             $table->timestamp('logout_time')->nullable();
             $table->integer('status')->default(0);
             $table->unsignedBigInteger('approved_by')->nullable();

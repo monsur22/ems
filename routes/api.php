@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\EntryExitController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +37,10 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
     Route::get('/user', [AuthController::class, 'user']);
     // Route::get('/employee', [EmployeeController::class]);
     // Route::resource('employee', EmployeeController::class);
+    // Route::post('/entry-store', [EntryExitController::class,'entryStore']);
 
 });
 Route::resource('employee', EmployeeController::class);
+Route::post('/entry-store', [EntryExitController::class,'entryStore']);
+// Route::post('/entry-store', [EntryExitController::class,'hello']);
+// Route::post('/entry-store', [EntryExitController::class,'entryStore'])->middleware('auth:sanctum');

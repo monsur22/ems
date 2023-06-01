@@ -3,7 +3,6 @@
 namespace App\Services\Impl;
 
 use App\Services\AuthServiceInterface;
-use App\Models\Employee;
 use App\Repositories\EmployeeRepositoryInterface;
 use App\Services\EmployeeServiceInterface;
 

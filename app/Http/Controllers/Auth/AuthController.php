@@ -49,10 +49,10 @@ class AuthController extends Controller
     }
     /*
     ----------------------------------------------------------------
-    | This loginUser function  userd for login.
+    | This loginUser function  used for login.
     | Auth::once($input) will attempt to authenticate the user with
     | given credentials ($input) without actually logging them in.
-    | If verified user loged in and generate token.
+    | If verified user log in and generate token.
     ----------------------------------------------------------------
     */
     public function loginUser(LoginRegister $request)
@@ -65,7 +65,7 @@ class AuthController extends Controller
     | This resetPassword function  for reset user Password.
     | First check  email exist or not with try case.
     | Then check email verified status.
-    | Check token exitst in PasswordReset table.
+    | Check token exist in PasswordReset table.
     | Then update or insert and send a email link.
     --------------------------------------------------------
     */
